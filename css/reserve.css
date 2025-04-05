@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0;
+    font-family: 'Times New Roman', Times, serif;
+    --vert: rgba(73, 230, 73, 0.795);
+    --blanc: #FFFFFF;
+    --gris: #3D3D3D;
+}
+nav{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--blanc);
+}
+nav .logo{
+    color: var(--vert);
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-left:50px ;
+}
+.headers{
+    z-index: 5;
+}
+.headers li{
+   font-size: 1.2rem;
+   
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    width: 70%;
+}
+nav ul select{
+    border: none;
+    width: 130px;
+   font-size: 1.3rem;
+   background-color: var(--blanc);
+   outline:0;
+}
+.menu{
+    width: 70px;
+}
+ nav a{
+    text-decoration: none;
+    color: black;
+ }
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ECECEC;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+.facture{
+    margin: 40px 40px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:  5px 5px 5px 5px rgba(73, 230, 73, 0.795);
+    color: black; 
+    border: solid var(--vert) 1.5px;
+}
+.facture p{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reserver{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 40px auto;
+    box-shadow:  5px 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+h1,h2 {
+    text-align: center;
+    color: var(--vert);
+}
+.formp{
+    padding: 15px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}form{
+    width: 100%;}
+input,select{
+    padding: 2px 10px;
+    outline: none;}
+label,select,input{
+    font-size: 18px;}
+#date_d{
+    width:48%;
+}
+#date_f{
+    width:52%;
+}
+#nbrp{
+    width: 66%;
+}
+#nom{
+    width: 71%;
+}
+#adresse{
+    width: 80%;
+}#heure_d{
+    width:70%;
+}#heure{
+    width:72%;}
+#service_id{
+    width: 63%;
+}
+textarea{
+    outline: none;
+    width: 77%;
+    font-size: 18px;
+}
+#comment1 {
+   display: flex;
+   gap: 5px;
+}
+i{
+    font-size: 2.5rem;
+    color: var(--vert);
+    position: relative;
+    margin: 10px 0px 0px 10px;
+   /* bottom:35%;
+    right:45%;*/
+}
+button{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--vert);
+    color: white;
+    padding: 10px 0px;
+    font-size: 18px;
+}
+@media (max-width: 1000px) {
+    main{
+        flex-direction: column;
+    }
+    .reserver{
+        width: 60%;
+    }
+}
+@media (max-width: 468px) {
+    .reserver {
+        width: 80%;
+    }
+}

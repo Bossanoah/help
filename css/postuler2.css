@@ -1,0 +1,256 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0;
+    font-family: 'Times New Roman', Times, serif;
+    --vert: rgba(73, 230, 73, 0.795);
+    --blanc: #FFFFFF;
+    --gris: #3D3D3D;
+    --grisclair: #F0F0F0;
+ }
+ nav{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanc);
+    position: fixed;
+ }
+ nav .logo{
+    width: 25%;
+    color: var(--vert);
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-left:40px ;
+ }
+ .headers li{
+   font-size: 1.3rem;
+ }
+ nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    width: 75%;
+ }
+
+ .menu{
+    width: 80px;
+ }
+ nav a{
+    text-decoration: none;
+    color: black;
+ }
+ .here a{
+    background-color: var(--vert);
+    border-radius: 25px;
+    padding: 5px 10px;
+    color: var(--blanc);
+ }
+ 
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+.dropdown p{
+   color: white;
+   border: none;
+   cursor: pointer;
+   text-align: center;
+   background-color: white;
+   font-size:1.3rem;
+}
+
+.dropdown-content {
+   display: none; 
+   position: absolute;
+   background-color: #e0e0e0; 
+   min-width: 150px;
+   z-index: 1;
+   border-radius: 5px;
+   justify-content: flex-start;
+}
+.dropdown-content a {
+   color: black;
+   padding: 5px;
+   text-decoration: none;
+   display: block;
+}
+.dropdown-content a:hover {
+   background-color: var(--vert);
+}
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+ body{
+    background-color: var(--grisclair);
+ }
+ .container {
+   padding-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ main h1 {
+  margin: 5px 0px;
+    color:var(--vert);
+ }
+ form {
+    margin-top: 20px;
+    align-self: center;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background: var(--blanc);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow:  5px 5px 5px 5px rgb(0, 0, 0, 0.3);
+ }
+ label {
+   font-size: 18px;
+    margin-top: 5px;
+ }
+form  input,form select,form textarea {
+    width: 95%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+ }
+ select{
+    width: 98%;
+ }
+ #services-menage,#services-avs{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    
+ }
+ #sousServices{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+ #sousServices label{
+    width:100%;
+    display: flex;
+    height: 20px;
+    justify-content: flex-start;
+ }
+ #sousServices label input{ 
+    width: 10%;
+ }
+ button {
+    background-color: var(--vert);
+    font-size: 18px;
+    color: var(--blanc);
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+ }
+ .phone{
+    margin-top: 7px;
+     display: flex;
+     flex-direction: row;
+     width:98%;
+     gap: 7px;
+     align-items: center;
+     justify-content: center;
+     border-radius: 5px;
+  }
+  .phone img{
+    width: 40px;
+    height: 25px;
+    position: relative;
+  } 
+  .phone input{
+    outline: 0;
+    background-color: transparent;
+  } 
+  .file-input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(73, 230, 73, 0.486);
+    cursor: pointer;
+ }
+ #certificat-container, .btn-menu {
+    display: none;
+ }
+ @media screen and (max-width: 1024px){
+    
+   nav .logo{
+       font-size: 1.4rem;
+       margin-left: 0px;
+       width: 35%;
+   }
+   ul{
+       display: flex;
+       flex-direction: column;
+   }
+   .headers{
+       position: fixed;
+       top: 0;
+       right: -100%;
+       height: 350px;
+       width: 200px;
+       background-color: #cfc8c87a;
+       color:white;
+       padding: 10px;
+       transition: right 0.3s;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       z-index: 1000;
+       border: #fff dotted;
+   }
+  
+   .headers li{
+       text-align: center;
+       padding: 10px 0;
+       font-size: 1.5rem;
+   }
+   .btn-menu{
+       position: fixed;
+       top: 10px;
+       right: 10px;
+       color: #3D3D3D;
+       padding: 10px;
+       cursor: pointer;
+       font-size: 2rem;
+       display: block;
+   }
+   .btn-menu i{
+       font-size: 2rem;
+   }
+   #omenu{
+       align-self: flex-end;
+       font-size: 10px;
+       margin-bottom: 20px;
+   }
+   #cmenu{
+       align-self: flex-end;
+       font-size: 15px;
+       margin-bottom: 20px;
+       display: none;
+   }
+form{
+   width: 70%;
+}
+ }
+ @media screen and (max-width: 768px){
+   form{
+      width: 80%;
+   }
+ }

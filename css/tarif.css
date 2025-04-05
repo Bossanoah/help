@@ -1,0 +1,252 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0;
+    font-family: 'Times New Roman', Times, serif;
+    --vert: rgba(73, 230, 73, 0.795);
+    --blanc: #FFFFFF;
+    --gris: #3D3D3D;
+}
+nav{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanc);
+    position: fixed;
+}
+nav .logo{
+    width: 30%;
+    color: var(--vert);
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-left:50px ;
+}
+.headers li{
+   font-size: 1.2rem;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    width: 70%;
+}
+nav ul select{
+    border: none;
+    width: 130px;
+   font-size: 1.3rem;
+   background-color: var(--blanc);
+   outline:0;
+}
+.menu{
+    width: 70px;
+}
+ nav a{
+    text-decoration: none;
+    color: black;
+}
+.here a{
+    background-color: var(--vert);
+    border-radius: 25px;
+    padding: 5px 10px;
+    color: var(--blanc);
+}
+ul a:hover{
+    background-color: rgba(149, 228, 149, 0.705);
+    color: white;
+    transition: all;
+    padding: 5px 10px;
+    border-radius: 20px;
+ }
+ .dropdown {
+    position: relative;
+    display: inline-block;
+ }
+ .dropdown p{
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size:1.3rem;
+ }
+ .dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e0e0e0; 
+    min-width: 150px;
+    z-index: 1;
+    border-radius: 5px;
+    justify-content: flex-start;
+ }
+ .dropdown-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+ }
+ .dropdown-content a:hover {
+    background-color: var(--vert);
+ }
+ .dropdown:hover .dropdown-content {
+    display: block;
+ }
+.btn-menu{
+    display: none;
+}
+.btn-menu i {
+    color: var(--vert);
+}
+header h1{
+    color: var(--vert);
+    text-align: center;
+    margin-top: 15px;
+}
+main{
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.img{
+    width: 100%;
+    height: 700px;
+}
+.note{
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.4rem;
+    color: white;
+}
+.note .button{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.note button{
+    width: 200px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background:  rgba(73, 230, 73, 0.795);
+    height: 45px;
+    border: none;
+    font-size:  1.5rem;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+.table-container{
+    overflow-x: auto;
+    margin: 20px;
+}
+table{
+  border-collapse : collapse;
+  width: 95%;
+  background-color: white;
+  border: 1px solid #ddd; 
+}
+th{
+    background-color:var(--vert);
+    color: white;
+    align-items:center;
+    font-size: 1.3rem;
+}
+td{
+    padding: 10px;
+    font-size: 1.1rem;
+}
+.table-result{
+  border-top: solid 1px #ddd;
+}
+@media screen and (max-width: 1024px){
+    
+        nav .logo{
+            font-size: 1.4rem;
+            margin-left: 10px;
+            width: 35%;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        .headers{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 350px;
+            width: 200px;
+            background-color: #cfc8c87a;
+            color:white;
+            padding: 10px;
+            transition: right 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 1000;
+           /* border: #fff dotted;*/
+        }
+       
+        .headers li{
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.5rem;
+        }
+        .btn-menu{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            color: #3D3D3D;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 2rem;
+            display: block;
+        }
+        .btn-menu i{
+            font-size: 2rem;
+        }
+        #omenu{
+            align-self: flex-end;
+            font-size: 10px;
+            margin-bottom: 20px;
+        }
+        #cmenu{
+            align-self: flex-end;
+            font-size: 15px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .notice {
+            width: calc(80% - 20px);
+            height: max-content;
+          }
+          .note button{
+            width: 140px;
+            height: 40px;
+            font-size:  1.3rem;
+        }
+        .note h1{
+            font-size:  2.5rem;
+        }
+        .note li{
+            font-size:  1.5rem;
+        }
+        .note .button{
+            flex-direction: column;
+        }
+    table{
+        width:100%;
+        display:block;
+    }
+}

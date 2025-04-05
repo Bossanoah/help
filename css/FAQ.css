@@ -1,0 +1,323 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0;
+    font-family: 'Times New Roman', Times, serif;
+    --vert: rgba(73, 230, 73, 0.795);
+    --blanc: #FFFFFF;
+    --gris: #3D3D3D;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanc);
+    position: fixed;
+}
+nav .logo{
+    width: 30%;
+    color: var(--vert);
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-left:30px ;
+}
+.headers li{
+   font-size: 1.2rem; 
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    width: 70%;
+}
+.menu{
+    width: 70px;
+}
+ nav a{
+    text-decoration: none;
+    color: black;
+}
+.here a{
+    background-color: var(--vert);
+    border-radius: 25px;
+    padding: 5px 10px;
+    color: var(--blanc);
+}
+ul a:hover{
+    background-color: rgba(149, 228, 149, 0.705);
+    color: white;
+    transition: all;
+    padding: 10px;
+    border-radius: 20px;
+ }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown p{
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size:1.3rem;
+}
+.dropdown p:hover {
+color: white;
+transition: all;
+padding: 5px 10px;
+}
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e0e0e0; 
+    min-width: 150px;
+    z-index: 1;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+.dropdown-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: var(--vert);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.img{
+    width: 100%;
+    height: 400px;
+    background-color:yellow;
+    display: flex;
+}
+h1{
+    color: var(--vert);
+    margin-top: 15px;
+    text-align: center;
+}
+h3{
+    margin: 15px 0px;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.question{
+    width: 100%;
+}
+.answers{
+    margin: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    width: 50%;
+}
+.faq-item{
+     border-bottom: 1px solid #ddd; 
+     padding: 5px 0; 
+     font-size: 18px;
+}
+details{ 
+    cursor: pointer; 
+    margin-bottom: 10px;
+}
+details p{
+    padding: 10px;
+    font-size: 18px;
+}
+summary{
+    display: flex;
+    justify-content: space-between; 
+    font-weight: bold;
+    font-size: 18px;
+}
+summary i{ 
+    transition: transform 0.3s;
+ }
+details[open] summary i {
+    transform: rotate(180deg);
+ }
+ .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+ }
+ .form-content{
+    display:flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+    width : 80%;
+    align-items: flex-start;
+ }
+ .form input,textarea{
+    width:100%;
+    padding: 10px 0px;
+    border: none;
+    background-color: rgb(216, 212, 212); 
+    outline: none;
+    font-size: 18px;
+ }
+ textarea{
+    padding: 40px 0px;
+ }
+ button{
+    margin-top: 10px;
+    color: white;
+    background-color: var(--vert);
+    border: none;
+    padding:10px;
+    font-style: bold;
+    width: 100px;
+ }
+ footer{
+    width: 100%;
+    background-color: var(--vert);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.ftop{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer li{
+    color :white;
+    list-style: none;
+}
+.politique{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ins input{
+    border: none;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.ins{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5px;
+}
+.ins .text{
+    background-color: rgb(89, 89, 138);
+    color: white;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn{
+    border:1px solid white;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.copy p{
+    color: white;
+}
+.btn-menu{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    
+    nav .logo{
+        font-size: 1.4rem;
+        margin-left: 0px;
+        width: 35%;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .headers{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 350px;
+        width: 200px;
+        background-color: #cfc8c87a;
+        color:white;
+        padding: 10px;
+        transition: right 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1000;
+        border: #fff dotted;
+    }
+    .headers li{
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.5rem;
+    }
+    .btn-menu{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        color: #3D3D3D;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 2rem;
+        display: block;
+    }
+    .btn-menu i{
+        font-size: 2rem;
+        color: var(--vert);
+    }
+    #omenu{
+        align-self: flex-end;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    #cmenu{
+        align-self: flex-end;
+        font-size: 15px;
+        margin-bottom: 20px;
+        display: none;
+    }
+    .answers{
+        width: 90%;
+    }
+    .ftop{
+        flex-direction: column;
+        gap: 15px;
+    }
+    form button{
+        margin-bottom: 10px;
+    }
+}
